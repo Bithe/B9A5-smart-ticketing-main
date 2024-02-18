@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- daisyUI Configuration -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+
+
+    <!-- tailwind custome color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'green-color-primary': '#1DD100',
+                        'border-color-primary': '#DD121111',
+                        'gray-color-primary': '#03071266',
+                        'footer-bg': '#131318',
+                    }
+                }
+            }
+        }
+    </script>
+    <!--  -->
+
+    <style>
+        .font {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="">
+        <!-- NAVBAR STARTS -->
+        <div class="container mx-auto lg:px-24 py-4 ">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost lg:text-4xl font-bold" style="margin-right: -0.2em;">R-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-red-color-primary">Home</a></li>
+
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end flex gap-6 items-center">
+                    <i class="fa-solid fa-magnifying-glass hidden md:inline "></i>
+                    <a class="btn bg-[#1DD10019] px-6 py-4 text-green-color-primary">Bus <img src="images/bus-icon.png"
+                            alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- NAVBAR ENDS -->
+
+        <!-- BANNER STARTS -->
+        <section class="container mx-auto px-1 lg:px-24 ">
+            <div class="carousel w-full  lg:h-[90vh] object-cover relative">
+                <div id="slide1" class="carousel-item relative w-full mb-0 lg:-mt-0 object-cover">
+                    <img src="Images/banner.png" class="w-full lg:h-5/7 rounded-2xl" />
+                    <div
+                        class="text-center w-full  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white ">
+
+                        <p class="lg:text-6xl lg:font-extrabold p-8"> End-to-End Travel with <br><span
+                                class="text-green-color-primary">R Transit</span></p>
+                        <p class="">Yes, you can run unit tests and view the results directly within the app. The <br>
+                            integrated testing
+                            features allow for a streamlined .</p>
+                        <br>
+                        <button class="bg-green-color-primary text-black rounded-xl p-4 font-bold">Buy Tickets</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            </div>
+
+
+
+
+        </section>
+        <!-- BANNER ENDS -->
+
+    </header>
+    <!--  -->
+
+    
+    <main class="container mx-auto lg:px-24 py-4">
+        <section class="flex flex-col lg:flex-row gap-6">
+
+            <div class="bg-[#FFBF0F] flex justify-center items-center flex-1 rounded-3xl">
+                
+                    <div>
+                        <p class="lg:text-3xl lg:font-extrabold">15% OFF</p>
+                        <p class="text-2xl font-semibold">on your next purchase</p>
+                        <p class="text-gray-color-primary font-medium">use by January 2024</p>
+                    </div>
+
+                    <div class="ml-16 mr-4"><img src="images/cupon-devider.png" alt=""></div>
+
+                    <div>
+                        <p class="text-3xl font-medium">NEW15</p>
+                        <p class="text-2xl font-medium text-gray-color-primary">Coupon Code</p>
+                    </div>
+                
+            </div>
+
+            <div class="bg-[#F78C9C] flex  justify-center items-center flex-1 rounded-3xl">
+                
+                <div>
+                    <p class="text-3xl font-extrabold">20% OFF</p>
+                    <p class="text-2xl font-semibold">on your next purchase</p>
+                    <p class="text-gray-color-primary font-medium">use by January 2024</p>
+                </div>
+
+                <div class="ml-16 mr-4"><img src="images/cupon-devider.png" alt=""></div>
+
+                <div>
+                    <p class="text-3xl font-medium">Couple 20</p>
+                    <p class="text-2xl font-medium text-gray-color-primary">Coupon Code</p>
+                </div>
+            
+        </div>
+
+
+
+
+
+
+
+        
+        </section>
+    </main>
+  
+
+</body>
+
+</html>
