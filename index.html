@@ -11,6 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!--  -->
 
+    <link rel="stylesheet" href="css/style.css">
+
 
     <!-- tailwind custome color -->
     <script>
@@ -301,7 +303,7 @@
                         <div class="font-medium text-base font-inter grid grid-cols-10 gap-3 md:gap-6 ">
 
                             <div class="flex flex-col  text-center col-span-1 *:py-3 gap-3 md:gap-6">
-                                <p class="text-white bg-white select-none">0</p>
+                                <!-- <p class="text-white bg-white select-none">0</p> -->
                                 <p>A</p>
                                 <p>B</p>
                                 <p>C</p>
@@ -315,7 +317,7 @@
                             </div>
 
                             <div class=" flex flex-col gap-3 md:gap-6 *:w-full *:py-3 *:rounded-xl col-span-2">
-                                <button class="text-white bg-white pointer-events-none select-none">0</button>
+                                <!-- <button class="text-white bg-white pointer-events-none select-none">0</button> -->
                                 <button class="seat bg-[#F7F8F8]">A1</button>
                                 <button class="seat bg-[#F7F8F8]">B1</button>
                                 <button class="seat bg-[#F7F8F8]">C1</button>
@@ -323,32 +325,31 @@
 
                             </div>
                             <div class=" flex flex-col gap-3 md:gap-6 *:w-full *:py-3 *:rounded-xl col-span-2">
-                                <button class="text-white bg-white pointer-events-none select-none">0</button>
-                                <button class="seat bg-[#F7F8F8]">A1</button>
-                                <button class="seat bg-[#F7F8F8]">B1</button>
-                                <button class="seat bg-[#F7F8F8]">C1</button>
-                                <button class="seat bg-[#F7F8F8]">D1</button>
+                                <!-- <button class="text-white bg-white pointer-events-none select-none">0</button> -->
+                                <button class="seat bg-[#F7F8F8]">A2</button>
+                                <button class="seat bg-[#F7F8F8]">B2</button>
+                                <button class="seat bg-[#F7F8F8]">C2</button>
+                                <button class="seat bg-[#F7F8F8]">D2</button>
 
                             </div>
                             <div class=" flex flex-col gap-3 md:gap-4 *:w-full *:py-3 *:rounded-xl col-span-1">
 
-
                             </div>
                             <div class=" flex flex-col gap-3 md:gap-6 *:w-full *:py-3 *:rounded-xl col-span-2">
-                                <button class="text-white bg-white pointer-events-none select-none">0</button>
-                                <button class="seat bg-[#F7F8F8]">A1</button>
-                                <button class="seat bg-[#F7F8F8]">B1</button>
-                                <button class="seat bg-[#F7F8F8]">C1</button>
-                                <button class="seat bg-[#F7F8F8]">D1</button>
+                                <!-- <button class="text-white bg-white pointer-events-none select-none">0</button> -->
+                                <button class="seat bg-[#F7F8F8]">A3</button>
+                                <button class="seat bg-[#F7F8F8]">B3</button>
+                                <button class="seat bg-[#F7F8F8]">C3</button>
+                                <button class="seat bg-[#F7F8F8]">D3</button>
 
                             </div>
 
                             <div class=" flex flex-col gap-3 md:gap-6 *:w-full *:py-3 *:rounded-xl col-span-2">
-                                <button class="text-white bg-white pointer-events-none select-none">0</button>
-                                <button class="seat bg-[#F7F8F8]">A1</button>
-                                <button class="seat bg-[#F7F8F8]">B1</button>
-                                <button class="seat bg-[#F7F8F8]">C1</button>
-                                <button class="seat bg-[#F7F8F8]">D1</button>
+                                <!-- <button class="text-white bg-white pointer-events-none select-none">0</button> -->
+                                <button class="seat bg-[#F7F8F8]">A4</button>
+                                <button class="seat bg-[#F7F8F8]">B4</button>
+                                <button class="seat bg-[#F7F8F8]">C4</button>
+                                <button class="seat bg-[#F7F8F8]">D4</button>
 
                             </div>
 
@@ -372,12 +373,18 @@
                         <div class="bg-[#F7F8F8] border rounded-3xl p-4 space-y-4 ">
 
                             <div class="grid grid-cols-3 font-bold">
-                                <p class="">Seat <span id="buy-seat-count"
-                                        class="bg-[#1DD100] text-white px-2 py-[2px] text-xs rounded-lg">0</span></p>
+
+                                <p class="">Seat 
+                                    <span id="count-buy-seats"
+                                        class="bg-green-color-primary text-white px-2 py-[2px] text-xs rounded-lg">0</span>
+                                </p>
                                 <p class="pl-5">Class</p>
                                 <p class="text-right">Price</p>
                             </div>
                             <hr class="border-dashed border-gray-300 h-0 w-full self-center">
+                            <ul id="selected-seats-info" class="selected-seats">
+
+                            </ul>
 
                             <hr class="border-solid border-gray-300 h-0 w-full self-center">
 
@@ -488,6 +495,9 @@
 
 
     </footer>
+
+    <script src="js/utility.js"></script>
+    <script src="js/app.js"></script>
 
 
 </body>
