@@ -68,6 +68,10 @@ for (const seat of allSeatsBtn) {
       couponBtn.addEventListener("click", function (e) {
         const coupon = document.getElementById("coupon-input").value;
 
+        if (coupon !== "NEW15" && coupon !== "Couple 20") {
+          alert("Coupon code did not match ");
+        }
+
         // FOR 15% DISCOUNT
         if (coupon === "NEW15") {
           let discount = totalPrice * 0.15;
@@ -77,13 +81,17 @@ for (const seat of allSeatsBtn) {
         }
 
         // FOR 20% DISCOUNT
-        if (coupon === "Couple 20") {
+        else if (coupon === "Couple 20") {
           let discount = totalPrice * 0.2;
           let grandTotalUpdated = totalPrice - discount;
 
           showInnerText("grand-total", grandTotalUpdated);
           couponApply(discount);
         }
+
+        // if(coupon !== "NEW15" || coupon === "Couple 20"){
+        //   alert('Coupon code did not match ');
+        // }
       });
     }
 
@@ -106,12 +114,11 @@ for (const seat of allSeatsBtn) {
         }
       });
 
-
     //   modal
 
     nextBtn.addEventListener("click", function () {
-        const modal = document.getElementById('my_modal_1');
-        modal.showModal();
+      const modal = document.getElementById("my_modal_1");
+      modal.showModal();
     });
 
     // call the show inner text set function
