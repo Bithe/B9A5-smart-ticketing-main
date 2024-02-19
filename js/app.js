@@ -17,7 +17,7 @@ for (const seat of allSeatsBtn) {
 
     // alert for more than 4 selection
     if (count > 4) {
-      alert("You can only select 4 seats ");
+      alert("You can't select more than 4 seats ");
       return;
     }
 
