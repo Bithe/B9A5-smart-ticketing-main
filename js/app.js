@@ -57,7 +57,7 @@ for (const seat of allSeatsBtn) {
       couponInput.removeAttribute("readonly");
       couponBtn.style.backgroundColor = "#1DD100";
     } else {
-       couponInput.setAttribute('readonly', true);
+      couponInput.setAttribute("readonly", true);
       couponBtn.style.backgroundColor = "";
     }
 
@@ -74,7 +74,6 @@ for (const seat of allSeatsBtn) {
           let grandTotalUpdated = totalPrice - discount;
           showInnerText("grand-total", grandTotalUpdated);
           couponApply(discount);
-
         }
 
         // FOR 20% DISCOUNT
@@ -88,9 +87,32 @@ for (const seat of allSeatsBtn) {
       });
     }
 
-
     //passenger section
-    
+    const nextBtn = document.querySelector("#next-btn");
+    const passengerName = document.querySelector("#passenger-name").value;
+    const passengerNumber = document.querySelector("#passenger-number").value;
+
+    if (passengerName !== "" && passengerNumber !== "" && count >= 1) {
+      nextBtn.removeAttribute("disabled");
+    } else {
+      nextBtn.setAttribute("disabled", true);
+    }
+
+    document
+      .querySelector("#passenger-number")
+      .addEventListener("keyup", function (e) {
+        if (e.target.value !== "" && count >= 1) {
+          document.querySelector("#next-btn").removeAttribute("disabled");
+        }
+      });
+
+
+    //   modal
+
+    nextBtn.addEventListener("click", function () {
+        const modal = document.getElementById('my_modal_1');
+        modal.showModal();
+    });
 
     // call the show inner text set function
     showInnerText("count-buy-seats", count);
@@ -101,8 +123,3 @@ for (const seat of allSeatsBtn) {
     showInnerText("grand-total", totalPrice);
   });
 }
-
-
-
-
-
