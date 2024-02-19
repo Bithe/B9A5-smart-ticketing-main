@@ -447,7 +447,7 @@
 
                             </div>
 
-
+                            <!-- success notification -->
                             <!-- Open the modal using ID.showModal() method -->
                             <button disabled id="next-btn"
                                 class="btn btn bg-green-color-primary w-full rounded-xl text-white text-xl font-bold "
@@ -465,7 +465,7 @@
                                     <div class="mt-4">
                                         <form method="dialog">
                                             <!-- if there is a button in form, it will close the modal -->
-                                            <button onclick="clearFiled()"
+                                            <button id="continue-btn" onclick="clearAll()"
                                                 class="btn bg-[#27AE60] text-white px-16 rounded-full">Continue</button>
                                         </form>
                                     </div>
@@ -500,7 +500,6 @@
         <!--Ticket Booking Ends -->
 
 
-        <!-- success notification -->
 
 
     </main>
@@ -523,10 +522,10 @@
                     <div class="flex  items-center gap-3 border-2 p-2 rounded-xl">
                         <div> <img src="images/playstore.png" alt="">
                         </div>
-                       <div>
-                        <p>Get it on</p>
-                        <p class="font-semibold text-2xl">Google Play</p>
-                       </div>
+                        <div>
+                            <p>Get it on</p>
+                            <p class="font-semibold text-2xl">Google Play</p>
+                        </div>
                     </div>
                 </div>
 
