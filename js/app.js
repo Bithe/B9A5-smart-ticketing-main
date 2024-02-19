@@ -73,18 +73,24 @@ for (const seat of allSeatsBtn) {
           let discount = totalPrice * 0.15;
           let grandTotalUpdated = totalPrice - discount;
           showInnerText("grand-total", grandTotalUpdated);
-          console.log(grandTotalUpdated);
+          couponApply(discount);
+
         }
+
         // FOR 20% DISCOUNT
         if (coupon === "Couple 20") {
           let discount = totalPrice * 0.2;
           let grandTotalUpdated = totalPrice - discount;
 
           showInnerText("grand-total", grandTotalUpdated);
-          console.log(grandTotalUpdated);
+          couponApply(discount);
         }
       });
     }
+
+
+    //passenger section
+    
 
     // call the show inner text set function
     showInnerText("count-buy-seats", count);
@@ -95,3 +101,8 @@ for (const seat of allSeatsBtn) {
     showInnerText("grand-total", totalPrice);
   });
 }
+
+
+
+
+
