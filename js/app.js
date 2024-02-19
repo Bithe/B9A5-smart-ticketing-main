@@ -1,13 +1,29 @@
 const allSeatsBtn = document.getElementsByClassName("seat");
 let count = 0;
+let availableSeats = 40;
 
 for (const seat of allSeatsBtn) {
   seat.addEventListener("click", function (e) {
+    // selected seats disabled
+    if (seat.classList.contains("disabled")) {
+      return;
+    }
+    seat.classList.add("disabled");
+
+    // counting the selected seat
     count = count + 1;
 
-    const seatName = e.target.innerText;
+    availableSeats = availableSeats - 1;
 
-    showInnerText("count-buy-seats", count);
+    // alert for more than 4 selection
+    if (count > 4) {
+      alert("You can only select 4 seats ");
+      return;
+    }
+
+    e.target.style.backgroundColor = "#1DD100";
+
+    const seatName = e.target.innerText;
 
     const ul = document.getElementById("selected-seats-info");
 
@@ -16,7 +32,7 @@ for (const seat of allSeatsBtn) {
     seatNameShow = seatName;
 
     let seatClass = document.createElement("p");
-    seatClass.innerText = " Economoy";
+    seatClass.innerText = "Economoy";
 
     let seatPrice = document.createElement("p");
     seatPrice = 550;
@@ -33,6 +49,49 @@ for (const seat of allSeatsBtn) {
 
     let totalPrice = totalPriceConvertToNum + ticketPrice;
 
+    // coupon button open
+    const couponBtn = document.getElementById("coupon-btn");
+    const couponInput = document.getElementById("coupon-input");
+
+    if (count === 4) {
+      couponInput.removeAttribute("readonly");
+      couponBtn.style.backgroundColor = "#1DD100";
+    } else {
+       couponInput.setAttribute('readonly', true);
+      couponBtn.style.backgroundColor = "";
+    }
+
+    // discount option after applying coupon
+    const grandTotal = document.getElementById("grand-total");
+
+    if (count === 4) {
+      couponBtn.addEventListener("click", function (e) {
+        const coupon = document.getElementById("coupon-input").value;
+
+        // FOR 15% DISCOUNT
+        if (coupon === "NEW15") {
+          let discount = totalPrice * 0.15;
+          let grandTotalUpdated = totalPrice - discount;
+          showInnerText("grand-total", grandTotalUpdated);
+          console.log(grandTotalUpdated);
+        }
+        // FOR 20% DISCOUNT
+        if (coupon === "Couple 20") {
+          let discount = totalPrice * 0.2;
+          let grandTotalUpdated = totalPrice - discount;
+
+          showInnerText("grand-total", grandTotalUpdated);
+          console.log(grandTotalUpdated);
+        }
+      });
+    }
+
+    // call the show inner text set function
+    showInnerText("count-buy-seats", count);
+    showInnerText("available-seats", availableSeats);
+
     showInnerText("total-price", totalPrice);
+
+    showInnerText("grand-total", totalPrice);
   });
 }
